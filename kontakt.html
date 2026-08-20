@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – A&S Global Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding-top: 80px; }
+        section { min-height: 70vh; display: flex; align-items: center; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo"><img src="ASLOGO.jpeg" alt="A&S Global Services" class="nav-logo-img"></a>
+    <ul class="nav-links">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#konfigurator">Anfrage</a></li>
+        <li><a href="ablauf.html">Ablauf</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:.8rem">
+        <a href="index.html#konfigurator" class="nav-cta">Jetzt Anfragen</a>
+        <div class="nav-burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+    <a href="index.html#leistungen"   onclick="closeNav()">Leistungen</a>
+    <a href="index.html#konfigurator" onclick="closeNav()">Anfrage</a>
+    <a href="ablauf.html"             onclick="closeNav()">Ablauf</a>
+    <a href="faq.html"                onclick="closeNav()">FAQ</a>
+    <a href="kontakt.html"            onclick="closeNav()">Kontakt</a>
+</nav>
+
+<section id="kontakt">
+    <div class="section-max">
+        <div class="section-eyebrow">Kontakt</div>
+        <h2 class="section-title">Sprechen wir <em>miteinander</em></h2>
+        <div class="contact-wrapper">
+            <div>
+                <p class="contact-tagline">Bereit für <em>makellose</em> Ergebnisse?</p>
+                <div class="contact-details">
+                    <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Standort</strong>Frankfurt &amp; Offenbach | Umgebung</div></div>
+                    <div class="contact-item"><div class="contact-item-icon">✉️</div><div class="contact-item-text"><strong>E-Mail</strong>asglobal.hausservice@gmail.com</div></div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-card-icon wa-icon">💬</div>
+                        <div><div class="contact-card-title">WhatsApp schreiben</div></div>
+                    </div>
+                    <textarea class="contact-input" id="wa-msg" rows="3" placeholder="Ihre Nachricht..."></textarea>
+                    <a href="#" class="wa-btn" onclick="sendWhatsApp(event)">In WhatsApp-Chat öffnen</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <div class="contact-card-icon mail-icon">✉️</div>
+                        <div><div class="contact-card-title">E-Mail senden</div></div>
+                    </div>
+                    <input class="contact-input" id="mail-name" type="text" placeholder="Ihr Name">
+                    <input class="contact-input" id="mail-reply" type="email" placeholder="Ihre E-Mail">
+                    <input class="contact-input" id="mail-subject" type="text" placeholder="Betreff">
+                    <textarea class="contact-input" id="mail-body" rows="3" placeholder="Ihre Nachricht..."></textarea>
+                    <button class="mail-btn" id="mail-send-btn" onclick="sendEmail()">✉️ E-Mail senden</button>
+                    <div id="mail-status" style="display:none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-logo">A&S Global Services</div>
+        <div class="footer-copy">© 2025 A&S Global Services – Frankfurt &amp; Offenbach</div>
+        <div class="footer-links">
+            <span class="footer-link" onclick="openModal('impressum')">Impressum</span>
+            <span class="footer-link" onclick="openModal('datenschutz')">Datenschutz</span>
+            <span class="footer-link" onclick="openModal('agb')">AGB</span>
+            <a href="https://www.instagram.com/as_global.hausservice/" target="_blank" class="footer-ig">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig3)"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+                @as_global.hausservice
+            </a>
+        </div>
+    </div>
+</footer>
+<!-- ══════════ MODALS ══════════ -->
+<div class="modal-overlay" id="modal-impressum">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('impressum')">✕</button>
+        <h2>Impressum</h2>
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p><strong style="color:#fff">A&S Global Services</strong><br>Inhaber: Samuel Biondolillo<br>Birkenlohrstraße 51<br>63069 Offenbach am Main · Deutschland</p>
+        <h3>Kontakt</h3>
+        <p>E-Mail: asglobal.hausservice@gmail.com<br>WhatsApp: +49 1734577817</p>
+        <h3>Umsatzsteuer</h3>
+        <p>Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung).</p>
+        <h3>Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)</h3>
+        <p>Samuel Biondolillo, Birkenlohrstraße 51 63069 Offenbach am Main</p>
+        <h3>Streitschlichtung</h3>
+        <p>Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--gold)">ec.europa.eu/consumers/odr</a>. Wir nehmen nicht an Streitbeilegungsverfahren teil.</p>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-datenschutz">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('datenschutz')">✕</button>
+        <h2>Datenschutzerklärung</h2>
+        <h3>1. Verantwortlicher</h3>
+        <p>A&S Global Services, Birkenlohrstraße 51 63069 Offenbach am Main, asglobal.hausservice@gmail.com</p>
+        <h3>2. Erhobene Daten</h3>
+        <p>Diese Website verwendet keine Tracking-Cookies und keine Analysetools. Wenn Sie uns über das Kontaktformular, WhatsApp oder E-Mail kontaktieren, verarbeiten wir die von Ihnen freiwillig übermittelten Daten (Name, E-Mail, Telefon, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage.</p>
+        <h3>3. Rechtsgrundlage</h3>
+        <p>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+        <h3>4. Speicherdauer</h3>
+        <p>Ihre Daten werden nur so lange gespeichert, wie zur Bearbeitung notwendig, danach gelöscht.</p>
+        <h3>5. Weitergabe an Dritte</h3>
+        <p>Keine Weitergabe. Bei WhatsApp-Nutzung gelten die Datenschutzbedingungen von Meta Platforms Ireland Ltd.</p>
+        <h3>6. Ihre Rechte (DSGVO)</h3>
+        <p>Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit. Anfragen an: asglobal.hausservice@gmail.com</p>
+        <h3>7. Cookies</h3>
+        <p>Es werden ausschließlich technisch notwendige Funktionen verwendet. Keine Tracking- oder Marketing-Cookies.</p>
+        <h3>8. Beschwerderecht</h3>
+        <p>Zuständige Aufsichtsbehörde: Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Wiesbaden.</p>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-agb">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('agb')">✕</button>
+        <h2>Allgemeine Geschäftsbedingungen</h2>
+        <h3>§1 Geltungsbereich</h3>
+        <p>Diese AGB gelten für alle Dienstleistungen von A&S Global Services gegenüber privaten und gewerblichen Auftraggebern.</p>
+        <h3>§2 Leistungserbringung</h3>
+        <p>Alle Leistungen werden sorgfältig, fachgerecht und in der vereinbarten Zeit ausgeführt. Vor Beginn erfolgt eine kurze Einweisung.</p>
+        <h3>§3 Preise und Abrechnung</h3>
+        <ul><li>Preise als Festpreis oder Stundenlohn vereinbart.</li><li>Festpreise werden nach Besichtigung schriftlich bestätigt.</li></ul>
+        <h3>§4 Stornierung</h3>
+        <p>Bei Absage unter 48 Stunden vor Termin wird eine Ausfallpauschale erhoben (50% des vereinbarten Gesamtpreises).</p>
+        <h3>§5 Haftung</h3>
+        <p>Haftung für nachweislich durch fehlerhafte Leistungserbringung entstandene Schäden. Keine Haftung für bereits vorhandene Schäden.</p>
+        <h3>§6 Gerichtsstand</h3>
+        <p>Es gilt deutsches Recht. Gerichtsstand ist Frankfurt am Main.</p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

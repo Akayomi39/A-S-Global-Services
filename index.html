@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&S Global Services – Entrümpelung, Reinigung & mehr | Frankfurt & Offenbach</title>
+    <meta name="description" content="Professionelle Entrümpelung, Reinigung, Abbruch Arbeiten, Malerarbeiten & mehr in Frankfurt, Offenbach und Umgebung. Schnell & Sauber.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+    <p class="cookie-text">Wir nutzen keine Tracking-Cookies. Nur technisch notwendige Funktionen. Details in unserer <a href="#" onclick="openModal('datenschutz');return false">Datenschutzerklärung</a>.</p>
+    <div class="cookie-actions">
+        <button class="cookie-btn-ok" onclick="closeCookie()">Verstanden</button>
+        <button class="cookie-btn-no" onclick="closeCookie()">Ablehnen</button>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo"><img src="ASLOGO.jpeg" alt="A&S Global Services" class="nav-logo-img"></a>
+    <ul class="nav-links">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#konfigurator">Anfrage</a></li>
+        <li><a href="ablauf.html">Ablauf</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:.8rem">
+        <a href="index.html#konfigurator" class="nav-cta">Jetzt Anfragen</a>
+        <div class="nav-burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+    <a href="index.html#leistungen"   onclick="closeNav()">Leistungen</a>
+    <a href="index.html#konfigurator" onclick="closeNav()">Anfrage</a>
+    <a href="ablauf.html"             onclick="closeNav()">Ablauf</a>
+    <a href="faq.html"                onclick="closeNav()">FAQ</a>
+    <a href="kontakt.html"            onclick="closeNav()">Kontakt</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+    <div class="hero-bg"></div><div class="hero-grid"></div>
+    <div class="hero-content">
+        <div>
+            <div class="hero-eyebrow animate">Frankfurt · Offenbach · Umgebung</div>
+            <h1 class="hero-title animate d1">Entrümpelung.<br>Reinigung.<br><em>Ihr Zuhause.</em></h1>
+            <p class="hero-desc animate d2">A&S Global Services – Schnell &amp; Sauber. Professionelle Entrümpelung, Haushaltsauflösungen, Handwerk und Reinigung aus einer Hand. Zuverlässig, fair, transparent.</p>
+            <div class="hero-actions animate d3">
+                <a href="#konfigurator" class="btn-primary">Anfrage</a>
+                <a href="#leistungen"   class="btn-outline">Leistungen ansehen</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- ══════════ LEISTUNGEN ══════════ -->
+<section id="leistungen">
+    <div class="section-max">
+        <div class="section-eyebrow">Unser Angebot</div>
+        <h2 class="section-title">Was wir für Sie <em>tun</em></h2>
+        <p class="section-desc">Von der Entrümpelung bis zum regelmäßigen Reinigungsservice – schnell, sauber und zu fairen Preisen in Frankfurt, Offenbach und Umgebung.</p>
+        <div class="services-grid">
+            <div class="service-card"><div class="service-icon">📦</div><div class="service-name">Entrümpelung</div><div class="service-desc">Komplette Entrümpelung von Wohnungen, Häusern, Kellern und Dachböden – inklusive fachgerechter Entsorgung.</div><div class="service-price">Preis nach Aufwand &amp; Volumen</div></div>
+            <div class="service-card"><div class="service-icon">🔨</div><div class="service-name">Abbruch Arbeiten</div><div class="service-desc">Fachgerechtes Abstemmen alter Fliesen in Bad, Küche oder anderen Räumen – sauber und termingerecht.</div><div class="service-price">Preis nach m²</div></div>
+            <div class="service-card"><div class="service-icon">🧱</div><div class="service-name">Pflastersteine reinigen</div><div class="service-desc">Gründliche Reinigung von Terrassen, Einfahrten und Gehwegen – gepflegter Außenbereich garantiert.</div><div class="service-price">Preis nach m²</div></div>
+            <div class="service-card"><div class="service-icon">🧹</div><div class="service-name">Reinigungsservice</div><div class="service-desc">Einmalreinigung oder Dauerauftrag (z. B. jeden Dienstag komplette Wohnung). Flexibel und maßgeschneidert.</div><div class="service-price"></div></div>
+            <div class="service-card"><div class="service-icon">🏠</div><div class="service-name">Haushaltsauflösung</div><div class="service-desc">Vollständige Auflösung von Haushalten – Wohnungen, Häuser, Nachlässe. Diskreet, respektvoll und termingerecht.</div><div class="service-price">Preis nach Aufwand &amp; Volumen</div></div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ══════════ VORHER / NACHHER MORPH ══════════ -->
+<!--<section id="transformation">-->
+<!--    <div class="section-max">-->
+<!--        <div class="section-eyebrow">Vorher &amp; Nachher</div>-->
+<!--        <h2 class="section-title">Der Unterschied, den wir <em>machen</em></h2>-->
+<!--        <div class="ba-grid">-->
+<!--            <div class="ba-morph-wrap">-->
+<!--                &lt;!&ndash; VORHER: ersetze src="vorher.jpg" mit deinem Bild &ndash;&gt;-->
+<!--                <img class="ba-morph-img" id="ba-img-vorher" src="" alt="Vorher">-->
+<!--                &lt;!&ndash; NACHHER: ersetze src="nachher.jpg" mit deinem Bild &ndash;&gt;-->
+<!--                <img class="ba-morph-img" id="ba-img-nachher" src="" alt="Nachher" style="opacity:0">-->
+<!--                <div class="ba-morph-badge" id="ba-badge">VORHER</div>-->
+<!--            </div>-->
+<!--            <div class="ba-info">-->
+<!--                <div class="ba-feature"><div class="ba-feature-icon">⚡</div><div><div class="ba-feature-title">Schnelle Ergebnisse</div><div class="ba-feature-desc">In kürzester Zeit verwandeln wir jeden Raum – ohne Rückstände, ohne Kompromisse.</div></div></div>-->
+<!--                <div class="ba-feature"><div class="ba-feature-icon">🤝</div><div><div class="ba-feature-title">Einweisung vor Ort</div><div class="ba-feature-desc">Bevor wir starten, erklären wir Ihnen genau was wir tun – für volle Transparenz.</div></div></div>-->
+<!--                <div class="ba-feature"><div class="ba-feature-icon">📅</div><div><div class="ba-feature-title">Flexible Termine</div><div class="ba-feature-desc">Einmalig oder regelmäßig als Dauerauftrag – wir passen uns Ihrem Alltag an.</div></div></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- ══════════ KONFIGURATOR WIZARD ══════════ -->
+<section id="konfigurator">
+    <div class="konfig-outer">
+        <div class="section-eyebrow">Sofortangebot</div>
+        <h2 class="section-title" style="margin-bottom:.5rem">Ihre Anfrage in <em>3 Minuten</em></h2>
+        <p class="section-desc" style="margin-bottom:2rem">Beantworten Sie ein paar Fragen zu Ihrem Objekt, damit wir ihnen ein Angebot zusenden können.</p>
+
+        <!-- PROGRESS -->
+        <div id="wiz-progress-wrap">
+            <div class="wiz-progress">
+                <div class="wiz-steps-row" id="wiz-prog-steps"></div>
+                <div class="wiz-bar-track"><div class="wiz-bar-fill" id="wiz-bar-fill" style="width:0%"></div></div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div id="wiz-body" class="wiz-layout">
+
+            <!-- LEFT: STEPS -->
+            <div>
+
+                <!-- STEP 1 – Leistungen -->
+                <div class="wiz-step active" id="wiz-s1">
+                    <div class="wiz-step-title">Welche Leistungen brauchen Sie?</div>
+                    <div class="wiz-step-sub">Mehrfachauswahl möglich – wählen Sie alles Zutreffende.</div>
+                    <div class="wiz-tiles" id="wiz-tiles"></div>
+                </div>
+
+                <!-- STEP 2 – Details -->
+                <div class="wiz-step" id="wiz-s2">
+                    <div class="wiz-step-title">Details zu Ihrem Auftrag</div>
+                    <div class="wiz-step-sub">Geben Sie so genaue Angaben wie möglich an – das ermöglicht uns eine präzise Schätzung.</div>
+
+                    <!-- Fliesen -->
+                    <div class="wiz-block" id="wiz-block-fliesen" style="display:none">
+                        <div class="wiz-block-title">🔨 Abbruch Arbeiten</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Schwierigkeitsgrad</span>
+                            <div class="wiz-radios" id="wiz-fl-grad"></div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Fläche in m²</span>
+                            <div class="wiz-num">
+                                <button class="wiz-num-btn" onclick="wizNum('fliesen-m2',-5)">−</button>
+                                <input class="wiz-num-input" id="wiz-n-fliesen-m2" type="number" min="1" value="20" oninput="wizNumInput('fliesen-m2',this.value)">
+                                <button class="wiz-num-btn" onclick="wizNum('fliesen-m2',5)">+</button>
+                                <span class="wiz-num-unit">m²</span>
+                            </div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Bauschutt-Entsorgung</span>
+                            <div class="wiz-radios" id="wiz-fl-entsorg"></div>
+                        </div>
+                    </div>
+
+                    <!-- Pflaster -->
+                    <div class="wiz-block" id="wiz-block-pflaster" style="display:none">
+                        <div class="wiz-block-title">🧱 Pflastersteine reinigen</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Verschmutzungsgrad</span>
+                            <div class="wiz-radios" id="wiz-pfl-grad"></div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Fläche in m²</span>
+                            <div class="wiz-num">
+                                <button class="wiz-num-btn" onclick="wizNum('pflaster-m2',-5)">−</button>
+                                <input class="wiz-num-input" id="wiz-n-pflaster-m2" type="number" min="1" value="30" oninput="wizNumInput('pflaster-m2',this.value)">
+                                <button class="wiz-num-btn" onclick="wizNum('pflaster-m2',5)">+</button>
+                                <span class="wiz-num-unit">m²</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Malerarbeiten -->
+                    <!--                    &lt;!&ndash; Malerarbeiten &ndash;&gt;-->
+                    <!--                    <div class="wiz-block" id="wiz-block-renovierung" style="display:none">-->
+                    <!--                        <div class="wiz-block-title">🎨 Malerarbeiten</div>-->
+                    <!--                        <div class="wiz-field">-->
+                    <!--                            <span class="wiz-label">Abrechnung</span>-->
+                    <!--                            <div style="background:var(&#45;&#45;dark4);border-radius:5px;padding:.7rem .9rem;font-size:.84rem;color:var(&#45;&#45;text);border:1.5px solid rgba(201,168,76,.2)">-->
+                    <!--                                ⏱ Abrechnung erfolgt <strong style="color:var(&#45;&#45;gold)">pro Stunde</strong> – der genaue Stundenlohn wird nach Besichtigung mitgeteilt.-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+
+                    <!-- Cleaning -->
+                    <div class="wiz-block" id="wiz-block-cleaning" style="display:none">
+                        <div class="wiz-block-title">🧹 Reinigungsservice</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Art der Reinigung</span>
+                            <div class="wiz-radios" id="wiz-cl-art"></div>
+                        </div>
+                        <div id="wiz-cl-dauerart-wrap">
+
+                            <!-- Datumswahl Dauerauftrag -->
+                            <div class="wiz-field" id="wiz-cl-datum-wrap" style="margin-top:.6rem">
+                                <span class="wiz-label">Zeitraum des Dauerauftrags</span>
+                                <div class="wiz-datum-row">
+                                    <div class="wiz-datum-field">
+                                        <label class="wiz-datum-label">Startdatum</label>
+                                        <input type="date" class="wiz-datum-input" id="wiz-cl-start" onchange="wizClBuildGrid()">
+                                    </div>
+                                    <div class="wiz-datum-sep">→</div>
+                                    <div class="wiz-datum-field">
+                                        <label class="wiz-datum-label">Enddatum</label>
+                                        <input type="date" class="wiz-datum-input" id="wiz-cl-end" onchange="wizClBuildGrid()">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Wochenplan-Grid -->
+                            <div id="wiz-cl-grid-wrap" style="display:none;margin-top:1rem">
+                                <span class="wiz-label" style="margin-bottom:.6rem;display:block">Wochenplan</span>
+                                <div class="wiz-cl-grid-scroll">
+                                    <table class="wiz-cl-grid" id="wiz-cl-grid"></table>
+                                </div>
+                            </div>
+                            <!-- Live-Vorschau: Zeitraum + Termine als Stichpunkte -->
+                            <div id="wiz-cl-schedule-preview" class="wiz-cl-schedule-preview" style="display:none;margin-top:1rem"></div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Fläche in m²</span>
+                            <div class="wiz-num">
+                                <button class="wiz-num-btn" onclick="wizNum('cleaning-m2',-5)">−</button>
+                                <input class="wiz-num-input" id="wiz-n-cleaning-m2" type="number" min="1" value="60" oninput="wizNumInput('cleaning-m2',this.value)">
+                                <button class="wiz-num-btn" onclick="wizNum('cleaning-m2',5)">+</button>
+                                <span class="wiz-num-unit">m²</span>
+                            </div>
+                        </div>
+                        <div id="wiz-cl-h-wrap">
+                            <div class="wiz-field">
+                                <span class="wiz-label">Geschätzte Stunden pro Termin</span>
+                                <div class="wiz-num">
+                                    <button class="wiz-num-btn" onclick="wizNum('cleaning-h',-1)">−</button>
+                                    <span class="wiz-num-val" id="wiz-n-cleaning-h">3</span>
+                                    <button class="wiz-num-btn" onclick="wizNum('cleaning-h',1)">+</button>
+                                    <span class="wiz-num-unit">Stunden</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Entrümpelung -->
+                    <div class="wiz-block" id="wiz-block-entruemp" style="display:none">
+                        <div class="wiz-block-title">📦 Entrümpelung</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Füllgrad / Menge der Gegenstände</span>
+                            <div class="wiz-radios" id="wiz-ent-grad"></div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Wohnfläche in m²</span>
+                            <div class="wiz-num">
+                                <button class="wiz-num-btn" onclick="wizNum('entruemp-m2',-5)">−</button>
+                                <input class="wiz-num-input" id="wiz-n-entruemp-m2" type="number" min="1" value="50" oninput="wizNumInput('entruemp-m2',this.value)">
+                                <button class="wiz-num-btn" onclick="wizNum('entruemp-m2',5)">+</button>
+                                <span class="wiz-num-unit">m²</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Haushaltsauflösung -->
+                    <div class="wiz-block" id="wiz-block-haushaltsaufloesung" style="display:none">
+                        <div class="wiz-block-title">🏠 Haushaltsauflösung</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Anlass der Haushaltsauflösung</span>
+                            <input class="wiz-form-input" id="wiz-hh-anlass" type="text" placeholder="z. B. Nachlass, Umzug, Renovierung ...">
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Füllgrad / Menge der Gegenstände</span>
+                            <div class="wiz-radios" id="wiz-hh-grad"></div>
+                        </div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Wohnfläche in m²</span>
+                            <div class="wiz-num">
+                                <button class="wiz-num-btn" onclick="wizNum('hh-m2',-5)">−</button>
+                                <input class="wiz-num-input" id="wiz-n-hh-m2" type="number" min="1" value="50" oninput="wizNumInput('hh-m2',this.value)">
+                                <button class="wiz-num-btn" onclick="wizNum('hh-m2',5)">+</button>
+                                <span class="wiz-num-unit">m²</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extras: Kartons & Entsorgung -->
+                    <div class="wiz-block" id="wiz-block-extras" style="display:none">
+                        <div class="wiz-block-title">➕ Zusatzoptionen</div>
+                        <div class="wiz-checks">
+                            <div class="wiz-check" id="wiz-extra-kartons-row" style="display:none;align-items:center" onclick="toggleExtra('kartons')">
+                                <div class="wiz-check-box"></div>
+                                <span class="wiz-check-text">📦 Kartons zur Verfügung stellen</span>
+                                <button onclick="event.stopPropagation();showInfoPopup('kartons')" style="margin-left:.5rem;width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,1);background:rgba(0,0,0,1);color:#fff;font-size:.65rem;font-weight:700;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center">i</button>
+                                <span style="font-size:.72rem;color:black;margin-left:.5rem;white-space:nowrap"></span>
+                            </div>
+                            <div class="wiz-check" id="wiz-extra-entsorgung-row" style="display:none;align-items:center" onclick="toggleExtra('entsorgung')">
+                                <div class="wiz-check-box"></div>
+                                <span class="wiz-check-text">♻️ Materialien entsorgen lassen</span>
+                                <button onclick="event.stopPropagation();showInfoPopup('entsorgung')" style="margin-left:.5rem;width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,1);background:rgba(0,0,0,1);color:#fff;font-size:.65rem;font-weight:700;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center">i</button>
+                                <span style="font-size:.72rem;color:var(--gold);margin-left:.5rem;white-space:nowrap"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end step 2 -->
+
+
+                <!-- STEP 3 – Objekt -->
+                <div class="wiz-step" id="wiz-s3">
+                    <div class="wiz-step-title">Objektinformationen</div>
+                    <div class="wiz-step-sub">Diese Angaben beeinflussen eventuelle Zuschläge – bitte so genau wie möglich angeben.</div>
+
+                    <div class="wiz-block">
+                        <div class="wiz-block-title">🏗 Lage im Gebäude</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Gibt es einen Aufzug?</span>
+                            <div class="wiz-radios" id="wiz-aufzug"></div>
+                        </div>
+                        <div id="wiz-etage-row" style="display:none">
+                            <div class="wiz-field" style="margin-top:.7rem">
+                                <span class="wiz-label">In welcher Etage befindet sich das Objekt?</span>
+                                <div class="wiz-radios" id="wiz-etage"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wiz-block">
+                        <div class="wiz-block-title">🚗 Parkplatz &amp; Zufahrt</div>
+                        <div class="wiz-field">
+                            <span class="wiz-label">Gibt es Parkmöglichkeiten direkt vor dem Gebäude?</span>
+                            <div class="wiz-radios" id="wiz-parken"></div>
+                        </div>
+                    </div>
+
+<!--                    <div class="wiz-block">-->
+<!--                        <div class="wiz-block-title">📍 Entfernung von Frankfurt</div>-->
+<!--                        <div class="wiz-field">-->
+<!--                            <span class="wiz-label">Wie weit ist Ihr Objekt von Frankfurt entfernt?</span>-->
+<!--                            <div class="wiz-radios" id="wiz-entf"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+
+                <!-- STEP 4 – Kontakt -->
+                <div class="wiz-step" id="wiz-s4">
+                    <div class="wiz-step-title">Fast geschafft – Ihre Kontaktdaten</div>
+                    <div class="wiz-step-sub">Damit wir Ihr finales Angebot erstellen und uns bei Ihnen melden können.</div>
+
+                    <div class="wiz-block">
+                        <div class="wiz-form-grid">
+                            <div class="wiz-form-field"><label class="wiz-form-label">Vorname *</label><input class="wiz-form-input" id="wf-vorname" type="text" placeholder="Max"></div>
+                            <div class="wiz-form-field"><label class="wiz-form-label">Nachname *</label><input class="wiz-form-input" id="wf-nachname" type="text" placeholder="Mustermann"></div>
+                            <div class="wiz-form-field"><label class="wiz-form-label">Telefon / WhatsApp</label><input class="wiz-form-input" id="wf-tel" type="tel" placeholder="+49 ..."></div>
+                            <div class="wiz-form-field"><label class="wiz-form-label">E-Mail-Adresse</label><input class="wiz-form-input" id="wf-email" type="email" placeholder="max@beispiel.de"></div>
+                            <div class="wiz-form-field full"><label class="wiz-form-label">Adresse des Objekts</label><input class="wiz-form-input" id="wf-adresse" type="text" placeholder="Straße, Hausnr., PLZ, Ort"></div>
+                            <div class="wiz-form-field full"><label class="wiz-form-label">Wunschtermin &amp; Anmerkungen</label><textarea class="wiz-form-input" id="wf-notiz" placeholder="z. B. Wunschtermin, Besonderheiten, Fragen..."></textarea></div>
+                        </div>
+                        <label class="wiz-dsgvo">
+                            <input type="checkbox" id="wf-dsgvo">
+                            <span class="wiz-dsgvo-text">Ich habe die <a href="#" onclick="openModal('datenschutz');return false">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Angebotserstellung einverstanden. *</span>
+                        </label>
+                        <div class="wiz-send-btns">
+                            <button class="wiz-btn-wa" onclick="wizSendWA()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                Via WhatsApp senden
+                            </button>
+                            <button class="wiz-btn-mail" onclick="wizSendMail()">✉️ Via E-Mail senden</button>
+                        </div>
+                        <div class="wiz-send-status" id="wiz-send-status"></div>
+                    </div>
+                </div>
+
+            </div><!-- end left -->
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="wiz-sidebar">
+            <div class="wiz-summary">
+                <div class="wiz-summary-title">📋 Ihre Anfrage</div>
+                <div class="wiz-sum-lines" id="wiz-sum-lines">
+                    <div class="wiz-sum-empty">Noch keine Auswahl getroffen</div>
+                </div>
+                <div class="wiz-sum-divider"></div>
+                <div class="wiz-badges">
+                    <div class="wiz-badge"><div class="wiz-badge-ico">🔒</div>Unverbindliche Anfrage</div>
+                    <div class="wiz-badge"><div class="wiz-badge-ico">⚡</div>Antwort innerhalb 24h</div>
+                </div>
+            </div>
+            <div class="wiz-nav">
+                <span class="wiz-counter" id="wiz-counter">Schritt 1 von 4</span>
+                <button class="wiz-btn-back" id="wiz-btn-back" onclick="wizBack()" style="display:none">← Zurück</button>
+                <button class="wiz-btn-next" id="wiz-btn-next" onclick="wizNext()">Weiter →</button>
+            </div>
+        </div>
+
+    </div><!-- end wiz-body -->
+
+    <!-- SUCCESS -->
+    <div class="wiz-success" id="wiz-success">
+        <div class="wiz-success-icon">✅</div>
+        <div class="wiz-success-title">Anfrage erfolgreich gesendet!</div>
+        <p class="wiz-success-text">Vielen Dank! Wir melden uns innerhalb von 24 Stunden mit Ihrem persönlichen Angebot.</p>
+        <button class="wiz-reset-btn" onclick="wizReset()">Neue Anfrage starten</button>
+    </div>
+
+    </div><!-- end konfig-outer -->
+</section>
+
+
+
+<!-- ══════════ QUALITÄT ══════════ -->
+<section id="qualitaet">
+    <div class="section-max">
+        <div class="section-eyebrow">Unsere Standards</div>
+        <h2 class="section-title">Was Sie von uns <em>erwarten können</em></h2>
+        <div class="quality-grid">
+            <div class="quality-card"><div class="quality-card-icon">⭐</div><div class="quality-card-title">Qualität</div><div class="quality-card-desc">Gute Arbeit, sauber und ordentlich – das ist unser Anspruch bei jedem Auftrag, egal wie groß oder klein.</div></div>
+            <div class="quality-card"><div class="quality-card-icon">🕐</div><div class="quality-card-title">Zuverlässigkeit</div><div class="quality-card-desc">Termine werden eingehalten, Absprachen werden eingehalten. Bei kurzfristiger Absage gilt eine Ausfallpauschale.</div></div>
+            <div class="quality-card"><div class="quality-card-icon">💬</div><div class="quality-card-title">Kommunikation</div><div class="quality-card-desc">Vor Arbeitsbeginn erklären wir Ihnen genau, was wir tun. Alle Absprachen werden klar getroffen.</div></div>
+            <div class="quality-card"><div class="quality-card-icon">🧹</div><div class="quality-card-title">Sauberer Arbeitsplatz</div><div class="quality-card-desc">Nach unserer Arbeit hinterlassen wir Ihren Bereich so sauber wie möglich – selbstverständlich für uns.</div></div>
+            <div class="quality-card"><div class="quality-card-icon">🔄</div><div class="quality-card-title">Flexibilität</div><div class="quality-card-desc">Wir gehen auf Ihre Wünsche ein und finden eine Lösung, die für beide Seiten passt.</div></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-logo">A&S Global Services</div>
+        <div class="footer-copy">© 2025 A&S Global Services – Frankfurt &amp; Offenbach</div>
+        <div class="footer-links">
+            <span class="footer-link" onclick="openModal('impressum')">Impressum</span>
+            <span class="footer-link" onclick="openModal('datenschutz')">Datenschutz</span>
+            <span class="footer-link" onclick="openModal('agb')">AGB</span>
+            <a href="https://www.instagram.com/as_global.hausservice/" target="_blank" class="footer-ig">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig3)"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+                @as_global.hausservice
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- ══════════ MODALS ══════════ -->
+<div class="modal-overlay" id="modal-impressum">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('impressum')">✕</button>
+        <h2>Impressum</h2>
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p><strong style="color:#fff">A&S Global Services</strong><br>Inhaber: Samuel Biondolillo<br>Birkenlohrstraße 51<br>63069 Offenbach am Main · Deutschland</p>
+        <h3>Kontakt</h3>
+        <p>E-Mail: asglobal.hausservice@gmail.com<br>WhatsApp: +49 1734577817</p>
+        <h3>Umsatzsteuer</h3>
+        <p>Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung).</p>
+        <h3>Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)</h3>
+        <p>Samuel Biondolillo, Birkenlohrstraße 51 63069 Offenbach am Main</p>
+        <h3>Streitschlichtung</h3>
+        <p>Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--gold)">ec.europa.eu/consumers/odr</a>. Wir nehmen nicht an Streitbeilegungsverfahren teil.</p>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-datenschutz">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('datenschutz')">✕</button>
+        <h2>Datenschutzerklärung</h2>
+        <h3>1. Verantwortlicher</h3>
+        <p>A&S Global Services, Birkenlohrstraße 51 63069 Offenbach am Main, asglobal.hausservice@gmail.com</p>
+        <h3>2. Erhobene Daten</h3>
+        <p>Diese Website verwendet keine Tracking-Cookies und keine Analysetools. Wenn Sie uns über das Kontaktformular, WhatsApp oder E-Mail kontaktieren, verarbeiten wir die von Ihnen freiwillig übermittelten Daten (Name, E-Mail, Telefon, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage.</p>
+        <h3>3. Rechtsgrundlage</h3>
+        <p>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+        <h3>4. Speicherdauer</h3>
+        <p>Ihre Daten werden nur so lange gespeichert, wie zur Bearbeitung notwendig, danach gelöscht.</p>
+        <h3>5. Weitergabe an Dritte</h3>
+        <p>Keine Weitergabe. Bei WhatsApp-Nutzung gelten die Datenschutzbedingungen von Meta Platforms Ireland Ltd.</p>
+        <h3>6. Ihre Rechte (DSGVO)</h3>
+        <p>Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit. Anfragen an: asglobal.hausservice@gmail.com</p>
+        <h3>7. Cookies</h3>
+        <p>Es werden ausschließlich technisch notwendige Funktionen verwendet. Keine Tracking- oder Marketing-Cookies.</p>
+        <h3>8. Beschwerderecht</h3>
+        <p>Zuständige Aufsichtsbehörde: Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Wiesbaden.</p>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-agb">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('agb')">✕</button>
+        <h2>Allgemeine Geschäftsbedingungen</h2>
+        <h3>§1 Geltungsbereich</h3>
+        <p>Diese AGB gelten für alle Dienstleistungen von A&S Global Services gegenüber privaten und gewerblichen Auftraggebern.</p>
+        <h3>§2 Leistungserbringung</h3>
+        <p>Alle Leistungen werden sorgfältig, fachgerecht und in der vereinbarten Zeit ausgeführt. Vor Beginn erfolgt eine kurze Einweisung.</p>
+        <h3>§3 Preise und Abrechnung</h3>
+        <ul><li>Preise als Festpreis oder Stundenlohn vereinbart.</li><li>Festpreise werden nach Besichtigung schriftlich bestätigt.</li></ul>
+        <h3>§4 Stornierung</h3>
+        <p>Bei Absage unter 48 Stunden vor Termin wird eine Ausfallpauschale erhoben (50% des vereinbarten Gesamtpreises).</p>
+        <h3>§5 Haftung</h3>
+        <p>Haftung für nachweislich durch fehlerhafte Leistungserbringung entstandene Schäden. Keine Haftung für bereits vorhandene Schäden.</p>
+        <h3>§6 Gerichtsstand</h3>
+        <p>Es gilt deutsches Recht. Gerichtsstand ist Frankfurt am Main.</p>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
