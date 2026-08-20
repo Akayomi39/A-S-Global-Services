@@ -1144,8 +1144,17 @@ try { if (!localStorage.getItem('ck')) setTimeout(() => document.getElementById(
 // ══════════════════════════════════════════
 // NAV MOBILE
 // ══════════════════════════════════════════
-function toggleNav() { document.getElementById('mobileNav')?.classList.toggle('open'); }
-function closeNav()  { document.getElementById('mobileNav')?.classList.remove('open'); }
+function toggleNav() {
+    const menu = document.getElementById('mobileNav');
+    const button = document.querySelector('.nav-burger');
+    if (!menu) return;
+    const isOpen = menu.classList.toggle('open');
+    button?.setAttribute('aria-expanded', String(isOpen));
+}
+function closeNav()  {
+    document.getElementById('mobileNav')?.classList.remove('open');
+    document.querySelector('.nav-burger')?.setAttribute('aria-expanded', 'false');
+}
 
 // ══════════════════════════════════════════
 // SCROLL ANIMATIONS
