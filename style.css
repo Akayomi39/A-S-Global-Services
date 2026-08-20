@@ -30,11 +30,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--accent)}
 .nav-cta{background:var(--accent);color:#fff;padding:.5rem 1.2rem;border-radius:2px;font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s;white-space:nowrap;position:relative;z-index:2}
 .nav-cta:hover{background:var(--gold-light)}
-.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.3rem;position:relative;z-index:2}
+.nav-burger{display:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;width:44px;height:44px;padding:0;border:0;background:transparent;position:relative;z-index:2}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--text)}
-.nav-mobile{display:none;position:fixed;top:var(--nav-h,70px);left:0;right:0;background:rgba(255,255,255,.98);padding:1.2rem 1.5rem;flex-direction:column;gap:.8rem;z-index:190;border-bottom:1px solid rgba(46,46,46,.12)}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h,70px);left:0;right:0;min-height:0;height:auto;justify-content:flex-start;overflow:visible;background:rgba(255,255,255,.98);padding:1rem 1.5rem 1.2rem;flex-direction:column;gap:.25rem;z-index:190;border-bottom:1px solid rgba(46,46,46,.12);box-shadow:0 12px 20px rgba(0,0,0,.08)}
 .nav-mobile.open{display:flex}
-.nav-mobile a{color:var(--muted);text-decoration:none;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.nav-mobile a{color:var(--muted);text-decoration:none;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 0;border-bottom:1px solid rgba(0,0,0,.06)}
 
 /* ── HERO ── */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:8rem 3rem 4rem}
@@ -411,14 +411,16 @@ footer{background:var(--dark2);border-top:1px solid rgba(60,60,60,.1);padding:1.
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-    nav{padding:.9rem 1.4rem}
-    .nav-logo-img{height:170px}
-    :root{--nav-h:110px}
+    :root{--nav-h:72px}
+    nav{padding:.35rem 1rem;min-height:var(--nav-h)}
+    .nav-logo{height:64px}
+    .nav-logo-img{height:64px}
+    .nav-cta{padding:.55rem .8rem;font-size:.7rem}
     .nav-links{display:none}
     .nav-burger{display:flex}
     section,#konfigurator{padding:3.5rem 1.4rem}
     .konfig-outer{padding:0 1.4rem}
-    .hero{padding:6.5rem 1.4rem 3rem}
+    .hero{padding:calc(var(--nav-h) + 2.5rem) 1.4rem 3rem}
     .hero-content,.ba-grid,.contact-wrapper{grid-template-columns:1fr}
     .wiz-layout{grid-template-columns:1fr}
     .wiz-sidebar{position:static}
@@ -434,6 +436,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(60,60,60,.1);padding:1.
     .wiz-form-field.full{grid-column:1}
 }
 @media(max-width:440px){
+    .nav-cta{padding:.5rem .65rem;font-size:.65rem;letter-spacing:.05em}
+    .nav-burger{width:40px;height:40px}
     .wiz-tiles{grid-template-columns:1fr}
 }
 /* ── DAUERAUFTRAG DATUMSWAHL & WOCHENPLAN ── */
